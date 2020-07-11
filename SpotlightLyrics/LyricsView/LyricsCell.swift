@@ -58,3 +58,16 @@ internal class LyricsCell: UITableViewCell {
     
     private weak var viewModel : LyricsCellViewModel? = nil
 }
+extension UITableViewCell {
+    func setTransparent() {
+        let bgView: UIView = UIView()
+        bgView.backgroundColor = UIColor.clear
+
+        self.backgroundView = bgView
+        self.backgroundColor = UIColor.clear
+        
+        self.layer.backgroundColor = UIColor.clear.cgColor
+        self.contentView.backgroundColor = UIColor.clear
+        
+    }
+}
